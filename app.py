@@ -33,6 +33,14 @@ def home():
 def food():
     return render_template('food.html', subtitle='Food Page', text='This is the food page')
 
+@app.route("/drugs")
+def drugs():
+    return render_template('drugs.html', subtitle='Drugs Page', text='This is the drugs page')
+
+@app.route("/cosmetics")
+def cosmetics():
+    return render_template('cosmetics.html', subtitle='Cosmetics Page', text='This is the cosmetics page')
+
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
