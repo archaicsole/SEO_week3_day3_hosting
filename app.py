@@ -29,6 +29,10 @@ with app.app_context():
 def home():
     return render_template('home.html', subtitle='Home Page', text='This is the home page')
 
+@app.route("/food")
+def food():
+    return render_template('food.html', subtitle='Food Page', text='This is the food page')
+
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
